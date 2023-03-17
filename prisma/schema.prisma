@@ -1,0 +1,23 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "mysql"
+    url      = env("PLANETSCALE_DATABASE_URL")
+}
+
+model posts {
+    id      String @id @db.Char(12)
+    title   String @db.VarChar(255)
+    body    String @db.Text
+    user_id String @db.Char(12)
+
+    @@index([user_id], map: "user_id")
+}
+
+model users {
+    id    String @id @db.Char(12)
+    name  String @db.VarChar(255)
+    email String @db.VarChar(255)
+}

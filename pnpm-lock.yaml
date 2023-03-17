@@ -1,21 +1,29 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@netlify/functions': ^1.4.0
   '@preact/preset-vite': ^2.5.0
+  '@prisma/client': ^4.11.0
   autoprefixer: ^10.4.14
   postcss: ^8.4.21
   preact: ^10.13.0
+  prisma: ^4.11.0
   tailwindcss: ^3.2.7
   typescript: ^4.9.3
   vite: ^4.2.0
+  wretch: ^2.5.1
 
 dependencies:
+  '@netlify/functions': 1.4.0
+  '@prisma/client': 4.11.0_prisma@4.11.0
   preact: 10.13.1
+  wretch: 2.5.1
 
 devDependencies:
   '@preact/preset-vite': 2.5.0_preact@10.13.1+vite@4.2.0
   autoprefixer: 10.4.14_postcss@8.4.21
   postcss: 8.4.21
+  prisma: 4.11.0
   tailwindcss: 3.2.7_postcss@8.4.21
   typescript: 4.9.5
   vite: 4.2.0
@@ -504,6 +512,13 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
+  /@netlify/functions/1.4.0:
+    resolution: {integrity: sha512-gy7ULTIRroc2/jyFVGx1djCmmBMVisIwrvkqggq5B6iDcInRSy2Tpkm+V5C63hKJVkNRskKWtLQKm9ecCaQTjA==}
+    engines: {node: '>=8.3.0'}
+    dependencies:
+      is-promise: 4.0.0
+    dev: false
+
   /@nodelib/fs.scandir/2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
     engines: {node: '>= 8'}
@@ -577,6 +592,28 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@prisma/client/4.11.0_prisma@4.11.0:
+    resolution: {integrity: sha512-0INHYkQIqgAjrt7NzhYpeDQi8x3Nvylc2uDngKyFDDj1tTRQ4uV1HnVmd1sQEraeVAN63SOK0dgCKQHlvjL0KA==}
+    engines: {node: '>=14.17'}
+    requiresBuild: true
+    peerDependencies:
+      prisma: '*'
+    peerDependenciesMeta:
+      prisma:
+        optional: true
+    dependencies:
+      '@prisma/engines-version': 4.11.0-57.8fde8fef4033376662cad983758335009d522acb
+      prisma: 4.11.0
+    dev: false
+
+  /@prisma/engines-version/4.11.0-57.8fde8fef4033376662cad983758335009d522acb:
+    resolution: {integrity: sha512-3Vd8Qq06d5xD8Ch5WauWcUUrsVPdMC6Ge8ILji8RFfyhUpqon6qSyGM0apvr1O8n8qH8cKkEFqRPsYjuz5r83g==}
+    dev: false
+
+  /@prisma/engines/4.11.0:
+    resolution: {integrity: sha512-0AEBi2HXGV02cf6ASsBPhfsVIbVSDC9nbQed4iiY5eHttW9ZtMxHThuKZE1pnESbr8HRdgmFSa/Kn4OSNYuibg==}
+    requiresBuild: true
 
   /@rollup/pluginutils/4.2.1:
     resolution: {integrity: sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==}
@@ -914,6 +951,10 @@ packages:
     engines: {node: '>=0.12.0'}
     dev: true
 
+  /is-promise/4.0.0:
+    resolution: {integrity: sha512-hvpoI6korhJMnej285dSg6nu1+e6uxs7zG3BYAm5byqDsgJNWwxzM6z6iZiAgQR4TJ30JmBTOwqZUw3WlyH3AQ==}
+    dev: false
+
   /js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
     dev: true
@@ -1081,6 +1122,14 @@ packages:
 
   /preact/10.13.1:
     resolution: {integrity: sha512-KyoXVDU5OqTpG9LXlB3+y639JAGzl8JSBXLn1J9HTSB3gbKcuInga7bZnXLlxmK94ntTs1EFeZp0lrja2AuBYQ==}
+
+  /prisma/4.11.0:
+    resolution: {integrity: sha512-4zZmBXssPUEiX+GeL0MUq/Yyie4ltiKmGu7jCJFnYMamNrrulTBc+D+QwAQSJ01tyzeGHlD13kOnqPwRipnlNw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      '@prisma/engines': 4.11.0
 
   /queue-microtask/1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
@@ -1253,6 +1302,11 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
+
+  /wretch/2.5.1:
+    resolution: {integrity: sha512-flhLreVaTBrFlgNUkzS0GYwyoqQs85eq9IteWNKt+n3HYCXCr9HLP0iGajbauKol64ucSuLK8rqHKgbmsDeyJA==}
+    engines: {node: '>=14'}
+    dev: false
 
   /xtend/4.0.2:
     resolution: {integrity: sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==}
